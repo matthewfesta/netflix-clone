@@ -16,7 +16,7 @@ function Row({ title, fetchUrl }) {
             return request;
         }
         fetchData();
-    }, []);
+    }, []); // if [], run once when the row loads, and don't run again
   return (
     <div>
         <h2>{title}</h2>
