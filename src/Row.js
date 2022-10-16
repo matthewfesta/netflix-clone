@@ -13,7 +13,9 @@ function Row({ title, fetchURL }) {
         // If [], run once when row loads and don't run again.
         async function fetchData() {
           const request = await axios.get(fetchURL);
-          console.log(request);
+          // request.data.results is what contains the movie objects 
+          console.log(request.data.results);
+          setMovies(request.data.results);
           return request;
         }
         fetchData();
