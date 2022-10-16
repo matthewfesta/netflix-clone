@@ -20,9 +20,20 @@ function Row({ title, fetchURL }) {
         }
         fetchData();
     }, [fetchURL]);
+
+    console.log(movies); // make sure it's working 
   return (
-    <div>
+    <div className="row">
         <h2>{title}</h2>
+
+        <div className="row__posters">
+          {/* container -> posters */}
+          {/* map through the movies array to retrieve image*/}
+          {movies.map(movie => (
+              <img src={movie.poster_path} alt={movie.name} />
+          ))} 
+            
+        </div>
         {/* Container -> posters */}
     </div>
   )
