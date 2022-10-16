@@ -1,6 +1,8 @@
 // Contains the Row component
+import { MongoMissingCredentialsError } from 'mongodb';
 import React, { useState, useEffect } from 'react'
 import axios from './axios.js';
+import './row.css';
 
 const baseURL = "https://image.tmdb.org/t/p/original/";
 
@@ -31,7 +33,11 @@ function Row({ title, fetchURL }) {
           {/* container -> posters */}
           {/* map through the movies array to retrieve image*/}
           {movies.map(movie => (
-              <img src={`${baseURL}${movie.poster_path}`} alt={movie.name} />
+            
+              <img
+              key={movie.id} /* Make rendering more efficient and smooth  */
+              className="row__poster"
+              src={`${baseURL}${movie.poster_path}`} alt={movie.name} />
           ))} 
             
         </div>
