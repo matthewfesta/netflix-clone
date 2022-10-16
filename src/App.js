@@ -7,8 +7,15 @@ function App() {
   return (
     <div className="App">
       <h1>Building Netflix Clone Front End</h1>
-      <Row title="NETFLIX ORIGINALS" fetchURL={requests.fetchNetflixOriginals}/>
-      <Row title="Trending Now" fetchURL={requests.fetchTrending} />
+      <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
+      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
+      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+      <Row title="Sci-Fi Movies" fetchUrl={requests.fetchSciFiMovies} />
+      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
     </div>
   );
 }
