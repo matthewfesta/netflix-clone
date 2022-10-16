@@ -33,7 +33,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
             
               <img
               key={movie.id} /* Make rendering more efficient and smooth  */
-              className="row__poster"
+              className={`row__poster ${isLargeRow && "row__posterLarge"}`} /*For styling the larger row differently */
               src={`${baseURL}${isLargeRow ? movie.poster_path : movie.backdrop_path}`} alt={movie.name} />
           ))} 
             

@@ -6,7 +6,8 @@ import requests from './requests.js';
 function App() {
   return (
     <div className="App">
-      <h1>Building Netflix Clone Front End</h1>
+      {/* TODO: Nav Bar*/}
+      {/* TODO: Banner */}
       <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
