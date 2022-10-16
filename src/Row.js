@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from './axios.js';
 
+const baseURL = "https://image.tmdb.org/t/p/original/";
 
 function Row({ title, fetchURL }) {
     // State - to keep track of the movies with short term memory
@@ -21,7 +22,7 @@ function Row({ title, fetchURL }) {
         fetchData();
     }, [fetchURL]);
 
-    console.log(movies); // make sure it's working 
+    console.table(movies); // console.table for arrays / objects 
   return (
     <div className="row">
         <h2>{title}</h2>
@@ -30,7 +31,7 @@ function Row({ title, fetchURL }) {
           {/* container -> posters */}
           {/* map through the movies array to retrieve image*/}
           {movies.map(movie => (
-              <img src={movie.poster_path} alt={movie.name} />
+              <img src={`${baseURL}${movie.poster_path}`} alt={movie.name} />
           ))} 
             
         </div>
