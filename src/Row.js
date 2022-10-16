@@ -15,14 +15,12 @@ function Row({ title, fetchUrl, isLargeRow }) {
         async function fetchData() {
           const request = await axios.get(fetchUrl);
           // request.data.results is what contains the movie objects 
-          console.log(request.data.results);
           setMovies(request.data.results);
           return request;
         }
         fetchData();
     }, [fetchUrl]);
-
-    console.table(movies); // console.table for arrays / objects 
+ 
   return (
     <div className="row">
         <h2>{title}</h2>
