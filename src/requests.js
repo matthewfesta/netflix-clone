@@ -1,5 +1,6 @@
 const API_KEY = "a12935ab024a281dfccc14d657ed7e00";
 
+
 // Declare a requests object to store all the requests from different genres
 // use with param as per the API documentation
 const requests = {
